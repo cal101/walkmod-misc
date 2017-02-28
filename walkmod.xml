@@ -1,8 +1,10 @@
 <!DOCTYPE walkmod PUBLIC "-//WALKMOD//DTD" "http://www.walkmod.com/dtd/walkmod-1.1.dtd">
 <walkmod>
+  <conf-providers>
+    <conf-provider type="rawclasspath">
+       <param name="classpath">lib/jsr305-3.0.0.jar</param>
+    </conf-provider>
+  </conf-providers>
     <transformation type="imports-cleaner"/>
     <transformation type="override"/>
-    <transformation type="rawclasspath">
-        <param name="classpath">lib/jsr305-3.0.0.jar</param>
-    </transformation>
 </walkmod>
