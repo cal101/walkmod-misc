@@ -1,17 +1,18 @@
 package org.walkmod.quickstart.model;
 
 import java.util.Date;
-import java.util.Calendar;
+
+import javax.annotation.Nullable;
 
 public class Tweet {
-   private User user;
+
+   @Nullable private User user;
 
    public String text;
 
    private Date date;
 
-   public Tweet() {
-   }
+       public Tweet() {}
 
    public Tweet(User user, String text) {
       this.user = user;
