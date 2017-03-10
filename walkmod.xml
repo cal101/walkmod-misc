@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE walkmod PUBLIC "-//WALKMOD//DTD" "http://www.walkmod.com/dtd/walkmod-1.1.dtd">
+<walkmod>
+  <conf-providers>
+    <conf-provider type="rawclasspath">
+      <param name="classpath">target/classes</param>
+    </conf-provider>
+  </conf-providers>
+  <chain name="walkmod">
+    <reader path="src/main/java">
+    </reader>
+    <walker type="javalang:walker">
+      <param name="ignoreErrors">true</param>
+      <transformations>
+        <transformation type="pmd">
+          <param name="configurationFile">csc_pmd.xml</param>
+        </transformation>
+      </transformations>
+    </walker>
+    <writer path="src/main/java" type="org.walkmod:walkmod-javalang-plugin:string-writer"/>
+  </chain>
+</walkmod>
